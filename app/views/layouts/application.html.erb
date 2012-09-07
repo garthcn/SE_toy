@@ -1,30 +1,36 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Ke</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-  <div class="navbar navbar-inverse navbar-fixed-top">
-    <div class="navbar-inner">
-      <div class="container">
-        <a class="brand" href="#">KE</a>
-        <ul class="nav">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#">Users</a></li>
-          <li><a href="#">Courses</a></li>
-        </ul>
+  <head>
+    <title>Ke</title>
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+    <script>
+    </script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <span class="brand">KE</span>
+          <ul class="nav">
+            <li><a href="/">Home</a></li>
+            <li><a href="/users">Users</a></li>
+            <li><a href="/courses">Courses</a></li>
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="container">
-    <%= yield %>
-    <hr>
-    <footer>
-      <p>Jiasi @ Carnegie Mellon</p>
-    </footer>
-  </div>
-</body>
+    <div id="content">
+      <div class="container">
+        <div id="wrap">
+          <%= yield %>
+        </div>
+        <hr>
+        <footer>
+          <p>Jiasi @ Carnegie Mellon</p>
+        </footer>
+      </div>
+    </div>
+  </body>
 </html>
