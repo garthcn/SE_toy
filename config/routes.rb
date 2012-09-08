@@ -14,6 +14,7 @@ AppTest::Application.routes.draw do
   resources :users
   resources :courses
   root :to => 'home#index'
+  match 'users/:id/add_course' => 'users#add_course'
 
   # Sample resource route with options:
   #   resources :products do

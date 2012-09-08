@@ -11,4 +11,9 @@ class CoursesController < ApplicationController
     end
     redirect_to '/courses'
   end
+
+  def show
+    @course = Course.find_by_id(params[:id])
+    @users = @course.users
+  end
 end

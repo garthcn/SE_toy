@@ -1,5 +1,5 @@
 <%= form_for @user, :url => { :action => "create" }, :html => {:class => "form-inline"} do |f| %>
   <%= f.text_field :name, :placeholder => 'Your name' %>
   <%= f.text_field :program, :placeholder => 'The program you are in' %>
-  <%= f.button :submit, :class => 'btn' %>
+  <%= f.submit 'Add Student', :class => 'btn' %>
 <% end %>

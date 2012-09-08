@@ -1,7 +1,7 @@
 (function() {
   var init = function() {
     $('.navbar ul.nav li').click(toggleTab);
-    $('a').click(swap);
+    //$('a').click(swap);
     var active = currentTab();
     $($('.navbar ul.nav li')[active]).addClass('active');
   }
@@ -23,10 +23,10 @@
   }
 
   var currentTab = function() {
-    switch(window.location.pathname) {
-      case '/users': 
+    switch(window.location.pathname.split('/')[1]) {
+      case 'users': 
         return 1;
-      case '/courses':
+      case 'courses':
         return 2;
       default:
         return 0;

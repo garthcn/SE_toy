@@ -1,0 +1,27 @@
+<script>
+  $('body').on('click', 'table.user tbody tr', function(evt) {
+    var url = '/users/' + $(evt.currentTarget).attr('data-user-id')
+    window.location = url;
+  });
+</script>
+
+<table class="table user">
+  <thead>
+    <tr>
+      <th>#</th>       
+      <th>Name</th>       
+      <th>Program</th>       
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr data-user-id="<%= user.id %>">
+        <th><%= user.id %></th>       
+        <th><%= user.name %></th>       
+        <th><%= user.program %></th>       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+

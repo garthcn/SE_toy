@@ -1,20 +1,2 @@
 <%= render 'form' %>
-<table class="table">
-  <thead>
-    <tr>
-      <th>#</th>       
-      <th>Name</th>       
-      <th>Note</th>       
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @courses.each do |c| %>
-      <tr>
-        <th><%= c.id %></th>       
-        <th><%= c.name %></th>       
-        <th><%= c.note %></th>       
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<%= render 'list' %>

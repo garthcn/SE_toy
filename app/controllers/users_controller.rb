@@ -12,4 +12,16 @@ class UsersController < ApplicationController
     redirect_to '/users'
   end
 
+  def show
+    @user = User.find_by_id(params[:id])
+    @courses = @user.courses
+  end
+  
+  def add_course 
+    @user = User.find_by_id(params[:id])
+    @course = Course.find_by_id(params[:course_id])
+    @user.courses << @course
+    redirect_to user_path @user
+  end
+
 end
