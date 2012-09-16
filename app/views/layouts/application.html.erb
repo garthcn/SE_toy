@@ -23,6 +23,13 @@
     <div id="content">
       <div class="container">
         <div id="wrap">
+
+          <% flash.each do |key, value| %>
+            <div class="alert alert-<%= key %>">
+              <%= value %>
+            </div>
+          <% end %>
+          
           <%= yield %>
         </div>
         <hr>

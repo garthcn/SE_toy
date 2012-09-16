@@ -1,0 +1,28 @@
+<div class="well">
+  <h3>
+    <%= @user.name %>
+  </h3>
+  <h5>
+    <%= @user.program %>
+  </h5>
+
+  <%= form_for @user, :url => user_path(@user), :html => {:method => 'put', :class => "form-horizontal"} do |f| %>
+    <div class='control-group'>
+      <%= f.label :name, :class => 'control-label' %>
+      <div class='controls'>
+        <%= f.text_field :name, :placeholder => @user.name %>
+      </div>
+    </div>
+    <div class='control-group'>
+      <%= f.label :program, :class => 'control-label' %>
+      <div class='controls'>
+        <%= f.text_field :program, :placeholder => @user.program %>
+      </div>
+    </div>
+    <div class='control-group'>
+      <div class='controls'>
+        <%= f.submit 'Update', :class => 'btn' %>
+      </div>
+    </div>
+  <% end %>
+</div>
