@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>OolONg</title>
+    <title>Oolong</title>
     <%= stylesheet_link_tag    "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
+    <link href='http://fonts.googleapis.com/css?family=Lemon' rel='stylesheet' type='text/css'>
     <%= csrf_meta_tags %>
     <link rel="shortcut icon" href="/favicon.ico" />
   </head>
@@ -11,7 +12,7 @@
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
-          <span class="brand">OolONg</span>
+          <span class="brand"><a href="/">Oolong</a></span>
           <ul class="nav">
             <li><a href="/">Home</a></li>
             <li><a href="/users">Users</a></li>
@@ -23,7 +24,6 @@
     <div id="content">
       <div class="container">
         <div id="wrap">
-
           <% flash.each do |key, value| %>
             <div class="alert alert-<%= key %>">
               <%= value %>
@@ -32,10 +32,12 @@
           
           <%= yield %>
         </div>
-        <hr>
-        <footer>
-          <p>Jiasi @ Carnegie Mellon</p>
-        </footer>
+        <div class="no-pjax">
+          <hr>
+          <footer>
+            <p>Jiasi @ Carnegie Mellon</p>
+          </footer>
+        </div>
       </div>
     </div>
   </body>

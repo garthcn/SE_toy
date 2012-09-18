@@ -12,4 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.pjax
+//= require init.js
 //= require_tree .
