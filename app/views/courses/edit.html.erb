@@ -1,22 +1,22 @@
 <div class="well">
   <h3>
-    <%= @user.name %>
+    <%= @course.name %>
   </h3>
   <h5>
-    <%= @user.program %>
+    <%= @course.note %>
   </h5>
 
-  <%= form_for @user, :remote => true, :url => user_path(@user), :html => {:method => 'put', :class => "form-horizontal"} do |f| %>
+  <%= form_for @course, :remote => true, :url => course_path(@course), :html => {:method => 'put', :class => "form-horizontal"} do |f| %>
     <div class='control-group'>
       <%= f.label :name, :class => 'control-label' %>
       <div class='controls'>
-        <%= f.text_field :name, :placeholder => @user.name %>
+        <%= f.text_field :name, :placeholder => @course.name %>
       </div>
     </div>
     <div class='control-group'>
-      <%= f.label :program, :class => 'control-label' %>
+      <%= f.label :note, :class => 'control-label' %>
       <div class='controls'>
-        <%= f.text_field :program, :placeholder => @user.program %>
+        <%= f.text_field :note, :placeholder => @course.note %>
       </div>
     </div>
     <div class='control-group'>
@@ -26,3 +26,4 @@
     </div>
   <% end %>
 </div>
+

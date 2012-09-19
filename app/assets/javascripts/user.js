@@ -2,6 +2,7 @@
   Oolong.User = {
     init : function() {
     }
+
   }
 
   //$(document).ready(init);

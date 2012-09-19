@@ -1,4 +1,4 @@
-<%= form_for @user, :url => { :action => "add_course" }, :html => {:class => "form-inline"} do |f| %>
-  <%= select_tag 'course_id', options_from_collection_for_select(Course.all, :id, :name) %>
+<%= form_for @user, :remote => true, :url => { :action => "add_course" }, :html => {:class => "form-inline"} do |f| %>
+  <%= select_tag 'course_id', options_from_collection_for_select(@other_courses, :id, :name) %>
   <%= f.submit 'Add', :class => 'btn' %>
 <% end %>
