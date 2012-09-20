@@ -10,9 +10,9 @@
   <tbody>
     <% @courses.each do |c| %>
       <tr data-link="/courses/<%= c.id %>" data-course-id="<%= c.id %>">
-        <th><%= c.id %></th>       
-        <th><%= c.name %></th>       
-        <th><%= c.note %></th>       
+        <td><%= c.id %></td>       
+        <td><%= c.name %></td>       
+        <td><%= c.note %></td>       
       </tr>
     <% end %>
   </tbody>

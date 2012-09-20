@@ -10,9 +10,9 @@
   <tbody>
     <% @users.each do |user| %>
       <tr data-link="/users/<%= user.id %>" data-user-id="<%= user.id %>">
-        <th><%= user.id %></th>       
-        <th><%= user.name %></th>       
-        <th><%= user.program %></th>       
+        <td><%= user.id %></td>       
+        <td><%= user.name %></td>       
+        <td><%= user.program %></td>       
       </tr>
     <% end %>
   </tbody>
