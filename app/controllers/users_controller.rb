@@ -2,6 +2,10 @@ class UsersController < ApplicationController
   def index
     @user = User.new
     @users = User.find(:all)
+    respond_to do |f|
+      f.html
+      f.xml { render :xml => @users.to_xml }
+    end
   end
   
   def create

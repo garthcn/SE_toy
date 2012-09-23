@@ -2,6 +2,10 @@ class CoursesController < ApplicationController
   def index
     @course = Course.new
     @courses = Course.find(:all) 
+    respond_to do |f|
+      f.html
+      f.xml { render :xml => @courses.to_xml }
+    end
   end
 
   def create
