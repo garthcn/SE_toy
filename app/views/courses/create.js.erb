@@ -1,3 +1,5 @@
 $('#course-list').hide()
   .html('<%= escape_javascript(render 'courses/list') %>')
   .fadeIn(500);
+$('#course-name').val('');
+$('#course-note').val('');

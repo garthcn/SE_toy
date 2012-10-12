@@ -1,4 +1,6 @@
 $('#user-list').hide()
   .html('<%= escape_javascript(render 'users/list') %>')
   .fadeIn(500);
+$('#user-name').val('');
+$('#user-program').val('');
 

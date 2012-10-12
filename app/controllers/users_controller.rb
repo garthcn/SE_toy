@@ -66,6 +66,9 @@ class UsersController < ApplicationController
     @course = Course.find_by_id(params[:course_id])
     @user.courses << @course
     @courses = @user.courses
+    @other_courses = Course.all.select { |c|
+      !@courses.include?(c)
+    }
     respond_to do |format|
       format.html { redirect_to user_path @user }
       format.js 
